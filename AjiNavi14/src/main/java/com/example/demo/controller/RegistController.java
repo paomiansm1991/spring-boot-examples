@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
-public class ReviewController {
+public class RegistController {
 	
 	private final RegistService service;
 	
@@ -60,9 +60,9 @@ public class ReviewController {
 		service.regist(r);
 		
 		
-		model.addAttribute("msg", "レビュー登録が完了しました");
+		model.addAttribute("msg", "レビュー登録");
 		
-		return "complete-regist-review";
+		return "complete";
 	}
 
 	
