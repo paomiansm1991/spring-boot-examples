@@ -60,7 +60,7 @@ public class RegistController {
 		service.regist(r);
 		
 		
-		model.addAttribute("msg", "レビュー登録");
+		model.addAttribute("msg", "(レビュー登録)");
 		
 		return "complete";
 	}
