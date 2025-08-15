@@ -22,16 +22,16 @@ public class RestaurantRepositoryImpl implements RestaurantRepository {
 	public List<Restaurant> selectByNameWildcard(String restaurantName) {
 
 		String sql = "SELECT"
-				+ " mr.restaurant_id, mr.restaurant_name, mr.catch_phrse,"
-				+ "COALESCE(AVG(tr.rating), 0.0) average_rating "
-				+ "FROM"
-				+ "m_restaurant mr"
-				+ "LEFT OUTER JOIN t_review tr ON mr.restaurant_id = tr.restaurant_id"
-				+ "WHERE"
-				+ "mr.restaurant_name LIKE ?"
-				+ "GROUP BY"
-				+ "mr.restaurant_id, mr.restaurant_name, mr.catch_phrase"
-				+ "ORDER BY"
+				+ " mr.restaurant_id, mr.restaurant_name, mr.catch_phrase, "
+				+ "COALESCE(AVG(tr.rating), 0.0) average_rating                "
+				+ "FROM 																					  "
+				+ "m_restaurant mr 																  "
+				+ "LEFT OUTER JOIN t_review tr ON mr.restaurant_id = tr.restaurant_id "
+				+ "WHERE 																					"
+				+ "mr.restaurant_name LIKE ?													"
+				+ "GROUP BY 																				"
+				+ "mr.restaurant_id, mr.restaurant_name, mr.catch_phrase		"
+				+ "ORDER BY 																				"
 				+ "mr.restaurant_id";
 
 		String p = "%" + restaurantName + "%";
