@@ -14,8 +14,8 @@
 		【店舗ID】<br>
 		<p th:text="*{restaurantId} +  ' ' + *{restaurantName}"></p>
 		
-		<input type="text" th:field="*{restaurantName}">
-		<input type="text" th:field="*{restaurantId}">
+		<input type="hidden" th:field="*{restaurantName}">
+		<input type="hidden" th:field="*{restaurantId}">
     	<div th:if="${#fields.hasErrors('restaurantId')}" th:errors="*{restaurantId}" class="error-msg"></div>
 		<br>
     	【利用者ID】<br>
