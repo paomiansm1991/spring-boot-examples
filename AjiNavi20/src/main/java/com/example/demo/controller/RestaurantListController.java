@@ -21,7 +21,7 @@ public class RestaurantListController {
 	private final RestaurantListService service;
 	
 	/*--- 最初のリクエスト　---*/
-	@GetMapping("top")
+	@GetMapping("/top")
 	private String restaurantList(
 			@ModelAttribute RestaurantSearchForm form) {
 		
