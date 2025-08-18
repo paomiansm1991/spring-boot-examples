@@ -31,8 +31,7 @@
 					<input type="hidden" name="restaurantName" th:value="${restaurant.restaurantName}">
 					<input type="submit" value="登録" class="tbtn">
 				</form>
-				
-		<tr th:each="restaurant : ${restaurantList}">
+			</td>
 			<td th:text="${restaurant.restaurantId}"></td>
 			<td th:text="${restaurant.restaurantName}"></td>
 			<td th:text="${restaurant.catchPhrase}"></td>
