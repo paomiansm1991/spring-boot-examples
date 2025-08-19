@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AjiNavi20Application {
+public class AjiNavi21Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AjiNavi20Application.class, args);
+		SpringApplication.run(AjiNavi21Application.class, args);
 	}
 
 }
